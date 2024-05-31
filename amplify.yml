@@ -10,6 +10,7 @@ backend:
       commands:
         - curl "https://github.com/aws/aws-sam-cli/releases/download/v1.103.0/aws-sam-cli-linux-x86_64.zip" -L -o "aws-sam-cli.zip"
         - unzip aws-sam-cli.zip -d sam-installation
+        - sudo mkdir -p /usr/local/aws-sam-cli/
         - ./sam-installation/install
         - pip3 install -U boto3
     build:
